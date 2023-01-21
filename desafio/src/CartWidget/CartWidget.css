@@ -4,6 +4,7 @@
     border: 2px solid ;
     border-radius: 5px;
     padding: 4px;
+    margin-right: 5px;
 }
 
 .cartDiv:hover {
@@ -12,5 +13,8 @@
 
 .cartDiv p {
     align-items: center;
-    margin: 15px 2px 0px 2px
+    margin: 15px 2px 0px ;
+    font-size: 25px;
+    margin-bottom: 10px;
+    
 }
