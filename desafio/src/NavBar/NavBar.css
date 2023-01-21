@@ -6,8 +6,18 @@
 .navDiv {
   background-color: rgb(156, 156, 156);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   padding: 20px;
+}
+
+.navTitle{
+text-align: center;
+}
+
+.navListCart{
+display: flex;
+justify-content: center;
 }
 
 .navList {
