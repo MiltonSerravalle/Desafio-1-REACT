@@ -1,0 +1,16 @@
+.cartDiv {
+    display: flex;
+    justify-content: center;
+    border: 2px solid ;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.cartDiv:hover {
+    background-color: white;
+}
+
+.cartDiv p {
+    align-items: center;
+    margin: 15px 2px 0px 2px
+}

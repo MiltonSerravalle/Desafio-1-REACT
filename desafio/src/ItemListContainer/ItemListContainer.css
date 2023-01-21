@@ -1,0 +1,8 @@
+.itemListDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100px;
+    
+}
