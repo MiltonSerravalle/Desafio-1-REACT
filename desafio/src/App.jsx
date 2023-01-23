@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import "./App.css"
 import ItemListContainer from './ItemListContainer/ItemListContainer'
 import NavBar from './NavBar/NavBar'
+import "./App.css"
 
 function App(props) {
  

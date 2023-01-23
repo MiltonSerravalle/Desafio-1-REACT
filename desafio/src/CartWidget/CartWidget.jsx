@@ -1,11 +1,12 @@
-import logo from "../assets/cart.png";
+import cartLogo from "../assets/cart.png";
 import "./CartWidget.css"
 
 const CartWidget = () => {
   return (
-    <div className="cartDiv">
-<img src={logo}  alt="" srcset="" />
+    <div><a  className="cartDiv" href="#">
+<img src={cartLogo}  alt="" srcset="" />
 <p>0</p>
+</a>
     </div>
   )
 }

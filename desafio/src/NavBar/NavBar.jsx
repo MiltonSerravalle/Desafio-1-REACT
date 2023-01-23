@@ -2,19 +2,24 @@ import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 
 const NavBar = () => {
-  return (
-    <div className="navDiv">
-      <h1 className="navTitle">San Justo Sneakers</h1>
-      <div className="navListCart">
-        <ul className="navList">
-          <li className="listItem">Inicio</li>
-          <li className="listItem">Productos</li>
-          <li className="listItem">Contacto</li>
-          <li className="listItem">Quienes Somos?</li>
-        </ul>
+  return (<>
+    <body>
+    <header className="header">
+      <div className="titleDiv">
+		<h1 className="logo"><a href="#">Mavsoleo Indumentaria</a></h1>
+    </div>
+      <ul className="main-nav">
+          <li><a className="grow"  href="#">Inicio</a></li>
+          <li><a className="grow" href="#">Productos</a></li>
+          <li><a className="grow" href="#">Contacto</a></li>
+          <li><a className="grow" href="#">Envios</a></li>
+      </ul> 
+      <div>
         <CartWidget />
       </div>
-    </div>
+	</header> 
+  </body>
+  </>
   );
 };
 
