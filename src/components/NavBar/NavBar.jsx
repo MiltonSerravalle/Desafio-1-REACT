@@ -4,7 +4,7 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <>
-      <body>
+      <div className="body">
         <header className="header">
           <div className="titleDiv">
             <h1 className="logo">
@@ -37,7 +37,7 @@ const NavBar = () => {
             <CartWidget />
           </div>
         </header>
-      </body>
+      </div>
     </>
   );
 };
