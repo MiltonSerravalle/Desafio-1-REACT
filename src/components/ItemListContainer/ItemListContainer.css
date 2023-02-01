@@ -1,11 +1,8 @@
-
-
-.itemListDiv
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   text-transform: uppercase;
+.itemListDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
     #231557 0%,
@@ -21,7 +18,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
-      font-size: 190px;
+  font-size: 190px;
 }
 
 @keyframes textclip {
