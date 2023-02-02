@@ -17,22 +17,23 @@ export const ItemListContainer = ({ greeting }) => {
 
   console.log(productos);
   return (
-    <center>
-      {loading ? (
+    
+      loading
+      ? 
         <h3>-- Cargando --</h3>
-      ) : (
-        productos.map((producto) => (
-          <div className="card" key={producto.id}>
+     : 
+      <div className="cardContainer">
+         {productos.map(producto => 
+         <div key={producto.id} className="card" >
             <div className="cardHeader">Nombre : {producto.name}</div>
             <div className="cardBody">
               <img className="cardImg" src={producto.foto}></img>
               Categoria: {producto.category} <br />
               Precio: {producto.price}
             </div>
-          </div>
-        ))
-      )}
-    </center>
+          </div>)}
+      </div>
+    
   );
-};
+      };
 export default ItemListContainer;

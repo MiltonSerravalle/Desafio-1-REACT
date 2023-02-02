@@ -14,22 +14,13 @@ const NavBar = () => {
           <ul className="main-nav">
             <li>
               <a className="navButton" href="#">
-                Inicio
+                Zapatillas
               </a>
             </li>
             <li>
               <a className="navButton" href="#">
-                Productos
-              </a>
-            </li>
-            <li>
-              <a className="navButton" href="#">
-                Contacto
-              </a>
-            </li>
-            <li>
-              <a className="navButton" href="#">
-                Envios
+                
+                Remeras
               </a>
             </li>
           </ul>
