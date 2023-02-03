@@ -1,19 +1,33 @@
 import { useEffect, useState } from "react";
 import "./ItemListContainer.css";
 import { gFetch } from "../../utils/gFetch";
+import { Link, useParams } from "react-router-dom";
 
 export const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const {idCategoria} = useParams()
+
+
   useEffect(() => {
+    if(idCategoria){
+      gFetch()
+      .then((res) => {
+        setProductos(res.filter(producto => producto.categoria === idCategoria));
+      })
+      .catch((error) => console.log(error))
+      .finally(() => setLoading(false));
+  
+    } else {
     gFetch()
       .then((res) => {
         setProductos(res);
       })
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
-  }, []);
+    }
+  }, [idCategoria]);
 
   console.log(productos);
   return (
@@ -25,12 +39,14 @@ export const ItemListContainer = ({ greeting }) => {
       <div className="cardContainer">
          {productos.map(producto => 
          <div key={producto.id} className="card" >
+            <Link to={`/detalle/${producto.id}`}>
             <div className="cardHeader">Nombre : {producto.name}</div>
             <div className="cardBody">
               <img className="cardImg" src={producto.foto}></img>
               Categoria: {producto.category} <br />
               Precio: {producto.price}
             </div>
+            </Link>
           </div>)}
       </div>
     

@@ -13,7 +13,8 @@ function App(props) {
       <NavBar />
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
-        <Route path="/detalle" element={<ItemDetailContainer /> } />      
+        <Route path="/categoria/:idCategoria" element={<ItemListContainer />}  />
+        <Route path="/detalle/:idProducto" element={<ItemDetailContainer /> } />    
       </Routes>
       <ItemCount />
     </div>
