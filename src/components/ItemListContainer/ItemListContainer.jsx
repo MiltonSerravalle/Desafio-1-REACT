@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./ItemListContainer.css";
-import { gFetch } from "../../utils/gFetch";
 import { Link, useParams } from "react-router-dom";
+import { gFetch } from "../../utils/gFetch";
+import "./ItemListContainer.css";
 
 export const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([]);
@@ -43,7 +43,7 @@ export const ItemListContainer = ({ greeting }) => {
             <div className="cardHeader">Nombre : {producto.name}</div>
             <div className="cardBody">
               <img className="cardImg" src={producto.foto}></img>
-              Categoria: {producto.category} <br />
+              Categoria: {producto.categoria} <br />
               Precio: {producto.price}
             </div>
             </Link>

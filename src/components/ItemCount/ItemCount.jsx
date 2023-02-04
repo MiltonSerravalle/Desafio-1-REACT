@@ -2,7 +2,7 @@
 
 const ItemCount = () => {
   return (
-    <div>ItemCount</div>
+    <div></div>
   )
 }
 

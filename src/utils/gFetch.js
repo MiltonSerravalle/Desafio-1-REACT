@@ -11,7 +11,7 @@ export const gFetch = () => {
 return new Promise ((res, rej) => {
     setTimeout(()=> {
     res(productos)
-    },1000) 
+    },500) 
     })
 }
 
