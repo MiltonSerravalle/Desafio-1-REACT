@@ -14,9 +14,9 @@
   justify-content: center;
   text-align: center;
   margin-top: 20px;
-  -webkit-box-shadow: inset 10px 10px 66px -27px rgba(0,0,0,0.75);
--moz-box-shadow: inset 10px 10px 66px -27px rgba(0,0,0,0.75);
-box-shadow: inset 10px 10px 66px -27px rgba(0,0,0,0.75);
+  -webkit-box-shadow: inset 10px 10px 66px -27px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 10px 10px 66px -27px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 10px 10px 66px -27px rgba(0, 0, 0, 0.75);
 }
 
 .cardBody {
@@ -28,7 +28,7 @@ box-shadow: inset 10px 10px 66px -27px rgba(0,0,0,0.75);
   width: 250px;
 }
 
-.cardDetail  {
+.cardDetail {
   font-weight: bold;
   text-align: center;
   margin-right: 20px;

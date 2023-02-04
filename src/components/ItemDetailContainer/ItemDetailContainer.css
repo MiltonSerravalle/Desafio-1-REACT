@@ -1,39 +1,37 @@
-.justify{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.justify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cardBorder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    border-radius: 38px 38px 38px 38px;
-    -moz-border-radius: 38px 38px 38px 38px;
-    -webkit-border-radius: 38px 38px 38px 38px;
-    border: 2px solid #000000;
-    -webkit-box-shadow: inset 10px 10px 66px -27px rgba(0,0,0,0.75);
--moz-box-shadow: inset 10px 10px 66px -27px rgba(0,0,0,0.75);
-box-shadow: inset 10px 10px 66px -27px rgba(0,0,0,0.75);
-width: 600px;
-height: 300px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  border-radius: 38px 38px 38px 38px;
+  -moz-border-radius: 38px 38px 38px 38px;
+  -webkit-border-radius: 38px 38px 38px 38px;
+  border: 2px solid #000000;
+  -webkit-box-shadow: inset 10px 10px 66px -27px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 10px 10px 66px -27px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 10px 10px 66px -27px rgba(0, 0, 0, 0.75);
+  width: 600px;
+  height: 300px;
 }
 
 .cardItem {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
 }
 
 .cardDetail {
-    text-align: center;
-    margin-left: 30px;
+  text-align: center;
+  margin-left: 30px;
 }
 
 .cardImg {
-    border: 1px groove black;
+  border: 1px groove black;
 }

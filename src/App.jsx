@@ -8,16 +8,19 @@ import "./App.css";
 
 function App(props) {
   return (
-  <BrowserRouter>
-    <div className="appBody">
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer />} />
-        <Route path="/categoria/:idCategoria" element={<ItemListContainer />}  />
-        <Route path="/detalle/:idProducto" element={<ItemDetailContainer /> } />    
-      </Routes>
-      <ItemCount />
-    </div>
+    <BrowserRouter>
+      <div className="appBody">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route
+            path="/categoria/:idCategoria"
+            element={<ItemListContainer />}
+          />
+          <Route path="/item/:idProducto" element={<ItemDetailContainer />} />
+        </Routes>
+        <ItemCount />
+      </div>
     </BrowserRouter>
   );
 }
