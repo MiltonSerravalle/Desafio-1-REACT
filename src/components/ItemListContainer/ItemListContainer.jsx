@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { gFetch } from "../../utils/gFetch";
+import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 
 export const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const { idCategoria } = useParams();
 
   useEffect(() => {
@@ -29,25 +29,13 @@ export const ItemListContainer = ({ greeting }) => {
     }
   }, [idCategoria]);
 
-  console.log(productos);
-  return loading ? (
-    <h3>-- Cargando --</h3>
-  ) : (
+  return (
     <div className="cardContainer">
-      {productos.map((producto) => (
-        <div key={producto.id} className="card">
-          <Link to={`/item/${producto.id}`}>
-            <div className="cardBody">
-              <h3>{producto.name}</h3>
-              <img className="cardImg" src={producto.foto}></img>
-              <div className="cardDetail">
-                <p>Categoria: {producto.categoria}</p>
-                <p>Precio: {producto.precio}</p>
-              </div>
-            </div>
-          </Link>
-        </div>
-      ))}
+      {loading ? (
+        <h2> --- CARGANDO PRODUCTOS ---</h2>
+      ) : (
+        <ItemList arregloProds={productos} />
+      )}
     </div>
   );
 };

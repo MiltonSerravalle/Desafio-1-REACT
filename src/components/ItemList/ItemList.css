@@ -1,0 +1,15 @@
+.card {
+    border-radius: 38px 38px 38px 38px;
+    -moz-border-radius: 38px 38px 38px 38px;
+    -webkit-border-radius: 38px 38px 38px 38px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    -webkit-box-shadow: inset 10px 10px 66px -27px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 10px 10px 66px -27px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 10px 10px 66px -27px rgba(0, 0, 0, 0.75);
+  }
+  

@@ -1,0 +1,19 @@
+ .cardBody {
+    margin: 5px;
+    text-align: center;
+  }
+  
+  .cardImg {
+    width: 250px;
+    margin: 8px;
+    border-radius: 38px 38px 38px 38px;
+    -moz-border-radius: 38px 38px 38px 38px;
+    -webkit-border-radius: 38px 38px 38px 38px;
+  }
+  
+  .cardDetail {
+    font-weight: bold;
+    text-align: center;
+    margin-right: 20px;
+  }
+  
