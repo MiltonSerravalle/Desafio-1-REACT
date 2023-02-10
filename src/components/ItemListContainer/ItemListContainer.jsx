@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { gFetch } from "../../utils/gFetch";
 import ItemList from "../ItemList/ItemList";
+import Loader from "../Loader/Loader";
 import "./ItemListContainer.css";
 
 export const ItemListContainer = ({ greeting }) => {
@@ -31,11 +32,11 @@ export const ItemListContainer = ({ greeting }) => {
 
   return (
     <div className="cardContainer">
-      {loading ? (
-        <h2> --- CARGANDO PRODUCTOS ---</h2>
-      ) : (
+      {loading ? 
+        <Loader />
+       :
         <ItemList arregloProds={productos} />
-      )}
+      }
     </div>
   );
 };
