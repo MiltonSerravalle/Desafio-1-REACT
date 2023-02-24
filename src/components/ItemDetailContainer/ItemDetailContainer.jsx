@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { gFetch } from "../../utils/gFetch";
+import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
@@ -24,6 +25,7 @@ const ItemDetailContainer = () => {
             <div className="cardDetail">
               <h2>{producto.name}</h2>
               <p>Precio: {producto.precio}</p>
+              <ItemCount />
             </div>
           </div>
         ))}

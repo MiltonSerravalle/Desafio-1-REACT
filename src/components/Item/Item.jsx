@@ -11,7 +11,7 @@ const Item = ({ element }) => {
   } = element;
   return (
     <div key={id}>
-      <Link to={`/item/${id}`}>
+      <Link to={`/item/${id}`} style={{textDecoration: 'none'}}>
         <div className="cardBody">
           <h3>{nombre}</h3>
           <img className="cardImg" src={foto}></img>
