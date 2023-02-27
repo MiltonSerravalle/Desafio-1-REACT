@@ -28,11 +28,15 @@ const ItemDetail = ({ productos }) => {
             <div className='card-body text-center'>
               <strong>ARS ${productos.precio}</strong>
             </div>
-            <div className='card-body text-center'>
-              <NavLink to={'/'} className="btn btn-dark btn-large"> Atras </NavLink>
+            <div className='mx-auto m-3'>
+            <ItemCount onAdd={onAdd} />
             </div>
+            <div className='card-body text-center'>
+              <NavLink to={'/'} className="btn btn-dark btn-large "> Atras </NavLink>
+            </div>
+            
           </div>
-          <ItemCount onAdd={onAdd} style={{ marginLeft: 'auto' }}/>
+          
         </div>
       </div>
     );

@@ -34,7 +34,7 @@ const ItemCount = ({ onAdd }) => {
             +
           </button>
           <button
-            className="btn btn-dark ml-3"
+            className="btn btn-dark ms-3"
             onClick={handleAddToCart}
             disabled={count === 0}
           >
@@ -44,13 +44,13 @@ const ItemCount = ({ onAdd }) => {
       ) : (
         <>
           <Link to="/cart">
-            <button className="btn btn-dark ml-3">
+            <button className="btn btn-dark ms-3 me-2">
               {" "}
               Terminar de comprar {" "}
             </button>
           </Link>
           <Link to="/">
-            <button className="btn btn-dark ml-3">
+            <button className="btn btn-dark me-3 ml-2" >
               {" "}
               Seguir comprando {" "}
             </button>

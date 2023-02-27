@@ -6,22 +6,22 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
           <NavLink to="/" style={{textDecoration: 'none'}}>
             <Navbar.Brand href="#home">MAVSOLEO INDUMENTARIA</Navbar.Brand>
           </NavLink>
-          <Nav className="me-auto">
+          <Nav className="md-auto">
             <NavLink to="/categoria/zapatillas" style={{textDecoration: 'none'}}>
               <Nav.Link href="#features">Zapatillas</Nav.Link>
             </NavLink>
             <NavLink to="/categoria/remeras" style={{textDecoration: 'none'}}>
               <Nav.Link href="#pricing">Remera</Nav.Link>
             </NavLink>
-            <NavLink to="/cart">
+          </Nav>
+            <NavLink to="/cart" className="ms-auto">
               <CartWidget />
             </NavLink>
-          </Nav>
         </Container>
       </Navbar>
     </>

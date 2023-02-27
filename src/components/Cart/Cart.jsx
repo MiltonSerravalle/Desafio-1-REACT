@@ -37,7 +37,7 @@ const Cart = () => {
         <div className='text-center'>No hay productos en el carrito</div>
       )}
       <div className='d-flex justify-content-end mt-3'>
-        <p className='mr-3'>Total: ARS ${sumTotal()}</p>
+        <p className='mt-3 me-3'>Total: ARS ${sumTotal()}</p>
         <button className='btn btn-danger' onClick={vaciarCarrito}> Vaciar Carrito </button>
       </div>
     </div>
