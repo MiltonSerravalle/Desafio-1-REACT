@@ -18,6 +18,9 @@ const NavBar = () => {
             <NavLink to="/categoria/remeras" style={{textDecoration: 'none'}}>
               <Nav.Link href="#pricing">Remera</Nav.Link>
             </NavLink>
+            <NavLink to="/cart">
+              <CartWidget />
+            </NavLink>
           </Nav>
         </Container>
       </Navbar>

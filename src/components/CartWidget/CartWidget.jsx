@@ -1,15 +1,14 @@
-import cartLogo from "../../assets/cart.png";
 import "./CartWidget.css";
 
-const CartWidget = () => {
+
+const Cartwidget = ({ cartCounter }) => {
   return (
-    <div>
-      <a className="cartDiv" href="#">
-        <img src={cartLogo} />
-        <p>0</p>
-      </a>
-    </div>
+    <>
+      <button className="p-2 border-solid border rounded-md shadow-md hover:shadow-lg text-sm hover:border-black rounded flex justify-center items-center gap-1 ">
+        <FaShoppingCart />
+        <span className="cart-counter">{cartCounter}</span>
+      </button>
+    </>
   );
 };
-
-export default CartWidget;
+export default Cartwidget;

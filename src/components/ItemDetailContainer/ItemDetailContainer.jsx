@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { gFetch } from '../../utils/gFetch';
 import ItemDetail from '../ItemDetail/ItemDetail';
-
-
 import './ItemDetailContainer.css'
  
 
