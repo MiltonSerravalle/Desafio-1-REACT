@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { gFetch } from "../../utils/gFetch";
 import ItemList from "../ItemList/ItemList";
 import Loader from "../Loader/Loader";
-import "./ItemListContainer.css";
+
 
 export const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([]);
@@ -31,7 +31,7 @@ export const ItemListContainer = ({ greeting }) => {
   }, [idCategoria]);
 
   return (
-    <div className="cardContainer">
+    <div className="container d-flex flex-wrap justify-content-evenly">
       {loading ? 
         <Loader />
        :
