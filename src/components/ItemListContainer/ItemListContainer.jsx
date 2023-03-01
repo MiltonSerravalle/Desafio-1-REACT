@@ -10,25 +10,25 @@ export const ItemListContainer = ({ greeting }) => {
   const [loading, setLoading] = useState(true);
   const { idCategoria } = useParams();
 
-  useEffect(() => {
-    if (idCategoria) {
-      gFetch()
-        .then((res) => {
-          setProductos(
-            res.filter((producto) => producto.categoria === idCategoria)
-          );
-        })
-        .catch((error) => console.log(error))
-        .finally(() => setLoading(false));
-    } else {
-      gFetch()
-        .then((res) => {
-          setProductos(res);
-        })
-        .catch((error) => console.log(error))
-        .finally(() => setLoading(false));
-    }
-  }, [idCategoria]);
+  // useEffect(() => {
+  //   if (idCategoria) {
+  //     gFetch()
+  //       .then((res) => {
+  //         setProductos(
+  //           res.filter((producto) => producto.categoria === idCategoria)
+  //         );
+  //       })
+  //       .catch((error) => console.log(error))
+  //       .finally(() => setLoading(false));
+  //   } else {
+  //     gFetch()
+  //       .then((res) => {
+  //         setProductos(res);
+  //       })
+  //       .catch((error) => console.log(error))
+  //       .finally(() => setLoading(false));
+  //   }
+  // }, [idCategoria]);
 
   return (
     <div className="container d-flex flex-wrap justify-content-evenly">
