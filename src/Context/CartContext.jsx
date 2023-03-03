@@ -23,7 +23,7 @@ export const CartContextProvider = ({children}) => {
 
     const sumTotal = () => {
       return cartList.reduce(
-        (acum, product) => acum + product.price * product.cantidad,
+        (acum, product) => acum + product.precio * product.cantidad,
         0
       );
     };

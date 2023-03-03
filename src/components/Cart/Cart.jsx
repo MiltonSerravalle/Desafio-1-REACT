@@ -82,7 +82,7 @@ const Cart = () => {
                     <img src={productos.foto} className="img-thumbnail w-25" />
                   </td>
                   <td>{productos.name}</td>
-                  <td>ARS ${<productos className="precio"></productos> * productos.cantidad}</td>
+                  <td>ARS ${productos.precio * productos.cantidad}</td>
                   <td>{productos.cantidad}</td>
                   <td>
                     <button
@@ -106,7 +106,7 @@ const Cart = () => {
 
       {cartList.length > 0 && (
         <div className="d-flex justify-content-end mt-3">
-          <p className="mr-3">Total: ARS ${sumTotal()}</p>
+          <p className="mr-3 m-2">Total: ARS ${sumTotal()}</p>
           <button className="btn btn-danger" onClick={vaciarCarrito}>
             Vaciar Carrito
           </button>
@@ -114,7 +114,7 @@ const Cart = () => {
       )}
       <br />
       <div className="text-center form-message">
-        <b>FORMULARIO PARA COMPLETAR COMPRA</b>
+        <b>FORMULARIO PARA COMPLETAR LA ORDEN DE COMPRA</b>
       </div>
       <form className="form-container" onSubmit={insertarOrder}>
         <div className="form-group">
