@@ -116,21 +116,21 @@ const Cart = () => {
       <div className="text-center form-message">
         <b>FORMULARIO PARA COMPLETAR LA ORDEN DE COMPRA</b>
       </div>
-      <form className="form-container" onSubmit={insertarOrder}>
+      <form className="form-container m-5" onSubmit={insertarOrder}>
         <div className="form-group">
-          <label htmlFor="name">Nombre:</label>
+          <label className="mb-2" htmlFor="name">Nombre Completo:</label>
           <input
             type="text"
             name="name"
             className="form-control"
-            placeholder="Ingrese nombre"
+            placeholder="Ingrese nombre completo"
             onChange={handleOnChange}
             value={formData.name}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="phone">Teléfono:</label>
+          <label className="mb-2 mt-2" htmlFor="phone">Teléfono:</label>
           <input
             type="text"
             name="phone"
@@ -142,7 +142,7 @@ const Cart = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label className="mb-2 mt-2" htmlFor="email">Email:</label>
           <input
             type="email"
             name="email"
@@ -154,7 +154,7 @@ const Cart = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="repetirEmail">Repetir Email:</label>
+          <label className="mb-2 mt-2" htmlFor="repetirEmail">Repetir Email:</label>
           <input
             type="email"
             name="repetirEmail"
@@ -167,7 +167,7 @@ const Cart = () => {
         </div>
         <button
           type="submit"
-          className="btn btnForm"
+          className="btn btn-success mt-4"
           disabled={!emailMatch}
         >
           {" "}

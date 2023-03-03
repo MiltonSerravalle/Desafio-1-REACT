@@ -6,6 +6,7 @@ import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 
 const NavBar = () => {
+  
   return (
     <>
       <Navbar bg="dark" variant="dark" expand="lg">
@@ -15,11 +16,11 @@ const NavBar = () => {
           </NavLink>
           <NavbarCollapse id="basic-navbar-nav">
           <Nav className="md-auto">
-            <NavLink to="/categoria/zapatillas" style={{textDecoration: 'none'}}>
-              <Nav.Link>Zapatillas</Nav.Link>
+            <NavLink className="m-2 nav-link active" to="/categoria/Zapatillas" style={{textDecoration: 'none'}}>
+              Zapatillas
             </NavLink>
-            <NavLink to="/categoria/remeras" style={{textDecoration: 'none'}}>
-              <Nav.Link>Remera</Nav.Link>
+            <NavLink className="m-2 nav-link active" to="/categoria/Remeras" style={{textDecoration: 'none'}}>
+              Remeras
             </NavLink>
           </Nav>
           </NavbarCollapse>
