@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useCartContext } from "../../Context/CartContext";
 import Swal from "sweetalert2";
+import { BiMessageAltCheck } from "react-icons/bi";
 
 
 
@@ -32,6 +33,7 @@ const Cart = () => {
           text: `ID de orden :  ${docRef.id}`,
           icon: "success",
           showConfirmButton: true,
+          background: "black"
         });
         erasedCart();
         setFormData({
@@ -89,8 +91,8 @@ const Cart = () => {
                       className="btn btn-eliminar"
                       onClick={() => deleteProduct(productos.id)}
                     >
-                      {" "}
-                      X{" "}
+                
+                      X
                     </button>
                   </td>
                 </tr>

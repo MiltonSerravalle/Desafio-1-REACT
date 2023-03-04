@@ -16,6 +16,8 @@ const ItemDetail = ({ productos }) => {
       icon: "success",
       timer: 1500,
       showConfirmButton: false,
+      background: "black"
+      
     });
   };
 

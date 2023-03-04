@@ -11,8 +11,6 @@ const ItemList = ({ productsArray }) => {
             <Item element={producto} />
           </div>
         );
-
-        console.log(ItemList);
       })}
     </>
   );

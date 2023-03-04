@@ -24,11 +24,11 @@ const ItemDetailContainer = () => {
         if (doc.exists()) {
           setProductos({ id: doc.id, ...doc.data() });
         } else {
-          console.log("El documento no existe");
+          console.log("No existe Doc");
         }
       })
       .catch((error) => {
-        console.log("Error obteniendo el documento: ", error);
+        console.log("Error en obtener el documento ", error);
       })
       .finally(() => setLoading(false));
   }, [idProducto]);

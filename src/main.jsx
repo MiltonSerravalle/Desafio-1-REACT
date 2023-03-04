@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { initFirestone } from './components/firebase/config'
+import { initFirestone } from './firebase/config';
+
 
 initFirestone();
 
