@@ -100,22 +100,22 @@ const Cart = () => {
             </tbody>
           </table>
         ) : (
-          <div className="text-center empty-cart-message">
-            <b>NO HAY PRODUCTOS EN EL CARRITO</b>
+          <div className="text-center">
+            <b>NO HAY PRODUCTOS AGREGADOS</b>
           </div>
         )}
       </div>
 
       {cartList.length > 0 && (
-        <div className="d-flex justify-content-end mt-3">
-          <p className="mr-3 m-2">Total: ARS ${totalAddition()}</p>
+        <div className="d-flex justify-content-evenly mt-3">
           <button className="btn btn-danger" onClick={erasedCart}>
             Vaciar Carrito
           </button>
+          <strong><p className="mr-3 m-2">Total: ARS ${totalAddition()}</p></strong>
         </div>
       )}
       <br />
-      <div className="text-center form-message">
+      <div className="text-center">
         <b>FORMULARIO PARA COMPLETAR LA ORDEN DE COMPRA</b>
       </div>
       <form className="form-container m-5" onSubmit={insertarOrder}>
@@ -137,7 +137,7 @@ const Cart = () => {
             type="text"
             name="phone"
             className="form-control"
-            placeholder="Ingrese teléfono"
+            placeholder="Ingrese su teléfono"
             onChange={handleOnChange}
             value={formData.phone}
             required
@@ -149,7 +149,7 @@ const Cart = () => {
             type="email"
             name="email"
             className="form-control"
-            placeholder="Ingrese email"
+            placeholder="Ingrese su email"
             onChange={handleOnChange}
             value={formData.email}
             required
@@ -161,12 +161,13 @@ const Cart = () => {
             type="email"
             name="repetirEmail"
             className="form-control"
-            placeholder="Repetir el email"
+            placeholder="Repetir su email"
             onChange={handleOnChange}
             value={formData.repetirEmail}
             required
           />
         </div>
+        <div className="d-flex justify-content-center">
         <button
           type="submit"
           className="btn btn-success mt-4"
@@ -175,6 +176,7 @@ const Cart = () => {
           {" "}
           Generar orden{" "}
         </button>
+        </div>
       </form>
     </div>
   );
