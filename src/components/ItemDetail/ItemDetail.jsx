@@ -2,24 +2,30 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useCartContext } from '../../Context/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
+import Swal from "sweetalert2";
 
 const ItemDetail = ({ productos }) => {
 
-  const { agregarCarrito } = useCartContext()
+  const { addToCart } = useCartContext()
 
   const onAdd = (cant) => {
-    agregarCarrito({ ...productos, cantidad: cant });
+    addToCart({ ...productos, cantidad: cant });
+    Swal.fire({
+      title: "Producto agregado al carrito",
+      text: `El producto ha sido agregado al carrito.`,
+      icon: "success",
+      timer: 1500,
+      showConfirmButton: false,
+    });
   };
 
-  const { cartList } = useCartContext()
-    console.log(cartList)
 
     return (
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div className="card mx-2 mt-5 mb-3 text-bg-secondary border-secondary" style={{width: "300px"}}>
+      <div className='d-flex flex-wrap justify-content-center' >
+        <div className='d-flex justify-content-center align-items-center' >
+          <div className="card mx-2 mt-5 mb-3 text-bg-secondary border-secondary" style={{width: "400px"}}>
             <div className='card-header text-center'>
-              <h3>{productos.name}</h3>
+              <h3>{productos.nombre}</h3>
             </div>
             <div className='card-body text-center'>
               <img src={productos.foto} alt='imagen' className='product-image w-100'/>
@@ -32,7 +38,7 @@ const ItemDetail = ({ productos }) => {
             <ItemCount onAdd={onAdd} />
             </div>
             <div className='card-body text-center'>
-              <NavLink to={'/'} className="btn btn-dark btn-large "> Atras </NavLink>
+              <NavLink to={'/'} className="btn btn-dark  "> Atras </NavLink>
             </div>
             
           </div>

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { collection, doc, getDoc, getFirestore } from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
-import { gFetch } from '../../utils/gFetch';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css'
+import Loader from '../Loader/Loader';
+
  
 
 const ItemDetailContainer = () => {
@@ -11,33 +13,31 @@ const ItemDetailContainer = () => {
 
   const { idProducto } = useParams()
 
-  useEffect (() => {
-    if (idProducto) {
-      gFetch()
-        .then(res => {
-          setProductos(res.find(producto => producto.id === idProducto));
-          setLoading(false);
-      })
-        .catch(error => console.log(error));
-      
-    } else {
+  useEffect(() => {
+    setLoading(true);
+    const db = getFirestore();
+    const productosCollection = collection(db, "productos");
+    const productoDoc = doc(productosCollection, idProducto);
 
-      gFetch()
-        .then(res => {
-          setProductos(res);
-          setLoading(false);
+    getDoc(productoDoc)
+      .then((doc) => {
+        if (doc.exists()) {
+          setProductos({ id: doc.id, ...doc.data() });
+        } else {
+          console.log("El documento no existe");
+        }
       })
-        .catch(error => console.log(error));
-    }
+      .catch((error) => {
+        console.log("Error obteniendo el documento: ", error);
+      })
+      .finally(() => setLoading(false));
   }, [idProducto]);
 
 
   if (loading) {
     return (
       <div className="d-flex justify-content-center">
-        <div className="loading-circle">
-          <div className="loading-inner-circle" />
-        </div>
+        <Loader />
       </div>
     );
   }
