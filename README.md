@@ -6,7 +6,9 @@ Tienda de ropa creada con React JS y VITE
 <img width="1438" src="https://i.ibb.co/j4H8GTn/cart.jpg" alt="cart" >
 
 
+## Deploy
 
+https://mavsoleo-indumentaria.netlify.app/
 
 
 ## Dependencias:
