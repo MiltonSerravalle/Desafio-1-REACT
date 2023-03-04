@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Item = ({ element }) => {
   const {
     id: id,
-    name: nombre,
+    nombre: nombre,
     precio: precio,
     foto: foto,
     categoria: categoria,

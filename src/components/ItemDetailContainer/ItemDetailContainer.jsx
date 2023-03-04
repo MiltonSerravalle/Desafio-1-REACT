@@ -3,6 +3,7 @@ import { collection, doc, getDoc, getFirestore } from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css'
+import Loader from '../Loader/Loader';
 
  
 
@@ -36,9 +37,7 @@ const ItemDetailContainer = () => {
   if (loading) {
     return (
       <div className="d-flex justify-content-center">
-        <div className="loading-circle">
-          <div className="loading-inner-circle" />
-        </div>
+        <Loader />
       </div>
     );
   }

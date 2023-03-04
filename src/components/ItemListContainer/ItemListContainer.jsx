@@ -16,15 +16,15 @@ import {
 export const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { idCategoria } = useParams();
+  const { idCategory } = useParams();
 
   useEffect(() => {
     setLoading(true);
     const db = getFirestore();
     const queryCollections = collection(db, "productos");
 
-    const queryFilter = idCategoria
-      ? query(queryCollections, where("categoria", "==", idCategoria))
+    const queryFilter = idCategory
+      ? query(queryCollections, where("categoria", "==", idCategory))
       : queryCollections;
 
     getDocs(queryFilter)
@@ -35,7 +35,7 @@ export const ItemListContainer = ({ greeting }) => {
       })
       .catch((err) => console.error(err))
       .finally(() => setLoading(false));
-  }, [idCategoria]);
+  }, [idCategory]);
 
   if (loading) {
     return (
@@ -52,7 +52,7 @@ export const ItemListContainer = ({ greeting }) => {
       {loading ? 
         <Loader />
        :
-        <ItemList arregloProds={productos} />
+        <ItemList productsArray={productos} />
       }
     </div>
   );

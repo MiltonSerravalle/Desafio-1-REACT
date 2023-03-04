@@ -14,7 +14,7 @@ const Cart = () => {
   });
   const [emailMatch, setEmailMatch] = useState(true);
 
-  const { cartList, vaciarCarrito, sumTotal, eliminarProducto } =
+  const { cartList, erasedCart, totalAddition, deleteProduct } =
     useCartContext();
 
   const insertarOrder = (evt) => {
@@ -28,12 +28,12 @@ const Cart = () => {
     addDoc(ordersCollection, order)
       .then((docRef) => {
         Swal.fire({
-          title: "Agregado exitosamente!",
-          text: `Su orden se genero exitosamente con el ID: ${docRef.id}`,
+          title: "Compra terminada con exito",
+          text: `ID de orden :  ${docRef.id}`,
           icon: "success",
           showConfirmButton: true,
         });
-        vaciarCarrito();
+        erasedCart();
         setFormData({
           name: "",
           phone: "",
@@ -81,13 +81,13 @@ const Cart = () => {
                   <td>
                     <img src={productos.foto} className="img-thumbnail w-25" />
                   </td>
-                  <td>{productos.name}</td>
+                  <td>{productos.nombre}</td>
                   <td>ARS ${productos.precio * productos.cantidad}</td>
                   <td>{productos.cantidad}</td>
                   <td>
                     <button
                       className="btn btn-eliminar"
-                      onClick={() => eliminarProducto(productos.id)}
+                      onClick={() => deleteProduct(productos.id)}
                     >
                       {" "}
                       X{" "}
@@ -106,8 +106,8 @@ const Cart = () => {
 
       {cartList.length > 0 && (
         <div className="d-flex justify-content-end mt-3">
-          <p className="mr-3 m-2">Total: ARS ${sumTotal()}</p>
-          <button className="btn btn-danger" onClick={vaciarCarrito}>
+          <p className="mr-3 m-2">Total: ARS ${totalAddition()}</p>
+          <button className="btn btn-danger" onClick={erasedCart}>
             Vaciar Carrito
           </button>
         </div>
