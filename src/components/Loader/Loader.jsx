@@ -2,7 +2,7 @@ import React from 'react'
 import "./Loader.css"
 
 const Loader = () => {
-  return (<div class="custom-loader"></div>
+  return (<div className="custom-loader"></div>
   )
 }
 

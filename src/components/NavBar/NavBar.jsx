@@ -1,3 +1,4 @@
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
@@ -5,30 +6,24 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <>
-      <div className="body">
-        <header className="header">
-          <div className="titleDiv">
-            <h1 className="logo">
-              <NavLink to="/">Mavsoleo Indumentaria</NavLink>
-            </h1>
-          </div>
-          <ul className="main-nav">
-            <li>
-              <NavLink to="/categoria/zapatillas" className="navButton">
-                Zapatillas
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/categoria/remeras" className="navButton">
-                Remeras
-              </NavLink>
-            </li>
-          </ul>
-          <div>
-            <CartWidget />
-          </div>
-        </header>
-      </div>
+      <Navbar bg="dark" variant="dark" expand="lg">
+        <Container>
+          <NavLink to="/" style={{textDecoration: 'none'}}>
+            <Navbar.Brand href="#home">MAVSOLEO INDUMENTARIA</Navbar.Brand>
+          </NavLink>
+          <Nav className="md-auto">
+            <NavLink to="/categoria/zapatillas" style={{textDecoration: 'none'}}>
+              <Nav.Link href="#features">Zapatillas</Nav.Link>
+            </NavLink>
+            <NavLink to="/categoria/remeras" style={{textDecoration: 'none'}}>
+              <Nav.Link href="#pricing">Remera</Nav.Link>
+            </NavLink>
+          </Nav>
+            <NavLink to="/cart" className="ms-auto">
+              <CartWidget />
+            </NavLink>
+        </Container>
+      </Navbar>
     </>
   );
 };
