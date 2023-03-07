@@ -10,19 +10,19 @@ const Item = ({ element }) => {
     categoria: categoria,
   } = element;
   return (
-    
-      <Link to={`/item/${id}`} key={id} style={{textDecoration: 'none'}}>
-        <div className="card  mt-5 text-bg-secondary mb-3" style={{width: "18rem"}}>
-
-          <img className="card-img-top " src={foto}></img>
-          <div className="card-body d-flex flex-column align-items-center">
+    <Link to={`/item/${id}`} key={id} style={{ textDecoration: "none" }}>
+      <div
+        className="card  mt-5 text-bg-secondary mb-3"
+        style={{ width: "18rem" }}
+      >
+        <img className="card-img-top " src={foto}></img>
+        <div className="card-body d-flex flex-column align-items-center">
           <h4 className="card-title">{nombre}</h4>
-            <p className="card-text">{categoria}</p>
-            <p className="card-text">AR$ : {precio}</p>
-          </div>
+          <p className="card-text">{categoria}</p>
+          <p className="card-text">AR$ : {precio}</p>
         </div>
-      </Link>
-    
+      </div>
+    </Link>
   );
 };
 

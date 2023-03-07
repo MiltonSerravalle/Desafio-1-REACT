@@ -11,8 +11,6 @@ import {
   where,
 } from "firebase/firestore";
 
-
-
 export const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -45,15 +43,9 @@ export const ItemListContainer = ({ greeting }) => {
     );
   }
 
-
-
   return (
     <div className="container d-flex flex-wrap justify-content-evenly">
-      {loading ? 
-        <Loader />
-       :
-        <ItemList productsArray={productos} />
-      }
+      {loading ? <Loader /> : <ItemList productsArray={productos} />}
     </div>
   );
 };

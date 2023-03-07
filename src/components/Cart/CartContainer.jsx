@@ -4,8 +4,6 @@ import { useCartContext } from "../../Context/CartContext";
 import Swal from "sweetalert2";
 import { BiMessageAltCheck } from "react-icons/bi";
 
-
-
 const Cart = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -33,7 +31,7 @@ const Cart = () => {
           text: `ID de orden :  ${docRef.id}`,
           icon: "success",
           showConfirmButton: true,
-          background: "black"
+          background: "black",
         });
         erasedCart();
         setFormData({
@@ -91,7 +89,6 @@ const Cart = () => {
                       className="btn btn-eliminar"
                       onClick={() => deleteProduct(productos.id)}
                     >
-                
                       X
                     </button>
                   </td>
@@ -111,7 +108,9 @@ const Cart = () => {
           <button className="btn btn-danger" onClick={erasedCart}>
             Vaciar Carrito
           </button>
-          <strong><p className="mr-3 m-2">Total: ARS ${totalAddition()}</p></strong>
+          <strong>
+            <p className="mr-3 m-2">Total: ARS ${totalAddition()}</p>
+          </strong>
         </div>
       )}
       <br />
@@ -120,7 +119,9 @@ const Cart = () => {
       </div>
       <form className="form-container m-5" onSubmit={insertarOrder}>
         <div className="form-group">
-          <label className="mb-2" htmlFor="name">Nombre Completo:</label>
+          <label className="mb-2" htmlFor="name">
+            Nombre Completo:
+          </label>
           <input
             type="text"
             name="name"
@@ -132,7 +133,9 @@ const Cart = () => {
           />
         </div>
         <div className="form-group">
-          <label className="mb-2 mt-2" htmlFor="phone">Teléfono:</label>
+          <label className="mb-2 mt-2" htmlFor="phone">
+            Teléfono:
+          </label>
           <input
             type="text"
             name="phone"
@@ -144,7 +147,9 @@ const Cart = () => {
           />
         </div>
         <div className="form-group">
-          <label className="mb-2 mt-2" htmlFor="email">Email:</label>
+          <label className="mb-2 mt-2" htmlFor="email">
+            Email:
+          </label>
           <input
             type="email"
             name="email"
@@ -156,7 +161,9 @@ const Cart = () => {
           />
         </div>
         <div className="form-group">
-          <label className="mb-2 mt-2" htmlFor="repetirEmail">Repetir Email:</label>
+          <label className="mb-2 mt-2" htmlFor="repetirEmail">
+            Repetir Email:
+          </label>
           <input
             type="email"
             name="repetirEmail"
@@ -168,14 +175,14 @@ const Cart = () => {
           />
         </div>
         <div className="d-flex justify-content-center">
-        <button
-          type="submit"
-          className="btn btn-success mt-4"
-          disabled={!emailMatch}
-        >
-          {" "}
-          Generar orden{" "}
-        </button>
+          <button
+            type="submit"
+            className="btn btn-success mt-4"
+            disabled={!emailMatch}
+          >
+            {" "}
+            Generar orden{" "}
+          </button>
         </div>
       </form>
     </div>

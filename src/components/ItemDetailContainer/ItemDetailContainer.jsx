@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { collection, doc, getDoc, getFirestore } from 'firebase/firestore';
-import { useParams } from 'react-router-dom';
-import ItemDetail from '../ItemDetail/ItemDetail';
-import './ItemDetailContainer.css'
-import Loader from '../Loader/Loader';
-
- 
+import React, { useEffect, useState } from "react";
+import { collection, doc, getDoc, getFirestore } from "firebase/firestore";
+import { useParams } from "react-router-dom";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import "./ItemDetailContainer.css";
+import Loader from "../Loader/Loader";
 
 const ItemDetailContainer = () => {
-  const [ productos, setProductos ] = useState({});
+  const [productos, setProductos] = useState({});
   const [loading, setLoading] = useState(true);
 
-  const { idProducto } = useParams()
+  const { idProducto } = useParams();
 
   useEffect(() => {
     setLoading(true);
@@ -33,7 +31,6 @@ const ItemDetailContainer = () => {
       .finally(() => setLoading(false));
   }, [idProducto]);
 
-
   if (loading) {
     return (
       <div className="d-flex justify-content-center">
@@ -43,10 +40,16 @@ const ItemDetailContainer = () => {
   }
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <ItemDetail productos={productos} />
     </div>
   );
-}
+};
 
 export default ItemDetailContainer;

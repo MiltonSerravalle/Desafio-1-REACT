@@ -14,9 +14,12 @@ function App(props) {
           <NavBar />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
-            <Route path="/categoria/:idCategory" element={<ItemListContainer />}/>
+            <Route
+              path="/categoria/:idCategory"
+              element={<ItemListContainer />}
+            />
             <Route path="/item/:idProducto" element={<ItemDetailContainer />} />
-            <Route path="/cart" element={<Cart />}/>
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
       </BrowserRouter>
